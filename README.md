@@ -1,7 +1,7 @@
 # Digital-alarm-Clock
 Digital alarm Clock Project for Front End Development Course
 
-Created an alarm clock using ONLY vanilla javascript, no libraries or frameworks are used Javascript .
+Created an alarm clock using ONLY vanilla javascript, no libraries or frameworks are used for Javascript .
 
 # Functionalities:
 
