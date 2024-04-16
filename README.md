@@ -18,4 +18,4 @@ Created an alarm clock using ONLY vanilla javascript, no libraries or frameworks
     - After you click OK to the AlERT pop up message, that alarm will be deleted automatically.
   
 
-LINK: <a href = "https://alarmclock-js.netlify.app/"> <b>LIVE PRODUCT</b> </a>  &nbsp; <a href = "https://thecodermanrr.github.io/Digital-alarm-Clock/"> <b>CODE</b> </a> <br>
+LINK: <a href = "https://thecodermanrr.github.io/Digital-alarm-Clock/"> <b>ALARM CLOCK</b> </a> <br>
