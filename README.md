@@ -7,9 +7,10 @@ Created an alarm clock using ONLY vanilla javascript, no libraries or frameworks
 
  1. Live clock
  2. Set Alarm
-    - Can input alarm time using drop down menu and click SET ALARM buttom.
+    - Can input alarm time using drop down menu and click SET ALARM button.
  3. List of Alarms
-    - All alarms will be added below Alarms text
+    - All alarms will be added below Alarms
+    - Can set multiple Alarms
  4. Alarm Notification
     - Alert message will pop up once the alarm time matches with the current time.
  5.Manage Alarms
