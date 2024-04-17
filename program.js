@@ -62,47 +62,36 @@ for (let i = 59; i > 0; i--) {
 
 // ADD ALARMS
 
+// Use a 12-hour clock format for alarms
+function formatTime(hours, minutes, seconds, period) {
+    return `${hours}:${minutes}:${seconds} ${period}`;
+}
+
 let alarmTimestamps = [];
 
+// Set alarm button click event
 setAlarmBtn.addEventListener("click", () => {
     const hrs = selectMenu[0].value;
     const mins = selectMenu[1].value;
     const secs = selectMenu[2].value;
     const ampm = selectMenu[3].value;
 
-    // Storing current time in alarmTime
-
     const alarmTime = new Date();
-
-    // CONVERTING HRS TO 24 HR FORMAT
-    // alarmTime represents the user-selected alarm time in the future.
-
     alarmTime.setHours(ampm === "PM" ? parseInt(hrs) + 12 : parseInt(hrs));
     alarmTime.setMinutes(parseInt(mins));
     alarmTime.setSeconds(parseInt(secs));
 
-    // getTime() method is used to get the numeric value 
-    // corresponding to the time for the specified date according to universal time
-
     const alarmTimestamp = alarmTime.getTime();
-
-    // ADIING ALARM to alarmTimestamps array
-
     alarmTimestamps.push(alarmTimestamp);
 
     const li = document.createElement("li");
-    li.textContent = `${hrs}:${mins}:${secs} ${ampm}`;
-
-
-    // CREATING DELETE BUTTON
+    li.textContent = formatTime(hrs, mins, secs, ampm);
 
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "Delete";
     deleteBtn.classList.add("delete-btn");
     deleteBtn.addEventListener("click", () => {
         li.remove();
-        // This line of code uses the filter method to create a new array with all elements from alarmTimestamps 
-        // except for the one that matches the current alarmTimestamp.
         alarmTimestamps = alarmTimestamps.filter(timestamp => timestamp !== alarmTimestamp);
     });
 
@@ -114,20 +103,11 @@ setAlarmBtn.addEventListener("click", () => {
 setInterval(() => {
     const now = new Date().getTime();
 
-    // ITERATE OVER EACH ELEMENT IN THE ARRAY alarmTimestamps
-
-    // The expression calculates the absolute difference in milliseconds 
-    // between the current time (now) and the set alarm time (alarmTimestamp). 
-    // The Math.abs() function is used to ensure that the result is a positive value, 
-    // regardless of the order of the subtraction.
-
     alarmTimestamps.forEach((alarmTimestamp, index) => {
         if (Math.abs(now - alarmTimestamp) < 1000) {
             alert("Alarm! Wake up!");
             const alarmItem = alarmsList.children[index];
-            // REMOVING THE CORRESPONDING <li>
             alarmItem.remove();
-            // REMOVING THE ELEMENT FROM ARRAY
             alarmTimestamps.splice(index, 1);
         }
     });
