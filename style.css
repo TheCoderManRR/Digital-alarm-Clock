@@ -45,7 +45,7 @@ h4{
 #mainBox{
     background-color:#475877;
     width:500px;
-    height:60vh;
+    height:auto;
     border: 10px solid white ;
     border-radius: 30px;
     margin-top:100px;
