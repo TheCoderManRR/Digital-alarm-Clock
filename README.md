@@ -15,7 +15,7 @@ Created an alarm clock using ONLY vanilla javascript, no libraries or frameworks
     - Alert message will pop up once the alarm time matches with the current time.
  5.Manage Alarms
     - Can delete alarm using DELETE button that will be created with the alarm time
-    - After you click OK to the AlERT pop up message, that alarm will be deleted automatically.
+    - After you click OK to the AlERT pop up message, that alarm will be deleted automatically. <hr>
   
 
-LINKs: <a href = "https://thecodermanrr.github.io/Digital-alarm-Clock/"> <b>CODE</b> </a> <hr><a href = "https://youtu.be/OyWshOHG_Aw"> <b>VIDEO</b> </a> <br>
+LINKs: <a href = "https://thecodermanrr.github.io/Digital-alarm-Clock/"> <b>CODE</b> </a> <&nbsp><&nbsp> <a href = "https://youtu.be/OyWshOHG_Aw"> <b>VIDEO</b> </a> <br>
