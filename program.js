@@ -64,22 +64,33 @@ for (let i = 59; i > 0; i--) {
 
 // Use a 12-hour clock format for alarms
 function formatTime(hours, minutes, seconds, period) {
+    // Pad hours, minutes, and seconds with a leading zero if less than 10
+    hours = hours < 10 ? "0" + hours : hours;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
     return `${hours}:${minutes}:${seconds} ${period}`;
 }
 
 let alarmTimestamps = [];
 
-// Set alarm button click event
 setAlarmBtn.addEventListener("click", () => {
-    const hrs = selectMenu[0].value;
-    const mins = selectMenu[1].value;
-    const secs = selectMenu[2].value;
+    const hrs = parseInt(selectMenu[0].value);
+    const mins = parseInt(selectMenu[1].value);
+    const secs = parseInt(selectMenu[2].value);
     const ampm = selectMenu[3].value;
 
+    let alarmHour = hrs;
+
+    if (ampm === "PM" && hrs !== 12) {
+        alarmHour += 12;
+    } else if (ampm === "AM" && hrs === 12) {
+        alarmHour = 0;
+    }
+
     const alarmTime = new Date();
-    alarmTime.setHours(ampm === "PM" ? parseInt(hrs) + 12 : parseInt(hrs));
-    alarmTime.setMinutes(parseInt(mins));
-    alarmTime.setSeconds(parseInt(secs));
+    alarmTime.setHours(alarmHour);
+    alarmTime.setMinutes(mins);
+    alarmTime.setSeconds(secs);
 
     const alarmTimestamp = alarmTime.getTime();
     alarmTimestamps.push(alarmTimestamp);
