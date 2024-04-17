@@ -74,10 +74,17 @@ function formatTime(hours, minutes, seconds, period) {
 let alarmTimestamps = [];
 
 setAlarmBtn.addEventListener("click", () => {
-    const hrs = parseInt(selectMenu[0].value);
+    // parseInt is used to convert the string values of hours, minutes, and seconds from the dropdown menus to integers 
+    const hrs = parseInt(selectMenu[0].value);     
     const mins = parseInt(selectMenu[1].value);
     const secs = parseInt(selectMenu[2].value);
     const ampm = selectMenu[3].value;
+
+    // Check if any of the values is not a number
+    if (isNaN(hrs) || isNaN(mins) || isNaN(secs)) {
+        alert("Please enter valid time values.");
+        return;
+    }
 
     let alarmHour = hrs;
 
