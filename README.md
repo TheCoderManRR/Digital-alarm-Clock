@@ -18,4 +18,4 @@ Created an alarm clock using ONLY vanilla javascript, no libraries or frameworks
     - After you click OK to the AlERT pop up message, that alarm will be deleted automatically. <hr>
   
 
-LINKs: <a href = "https://thecodermanrr.github.io/Digital-alarm-Clock/"> <b>CODE</b> </a> &nbsp&nbsp <a href = "https://youtu.be/OyWshOHG_Aw"> <b>VIDEO</b> </a> <br><hr>
+LINKs: <a href = "https://thecodermanrr.github.io/Digital-alarm-Clock/"> <b>CODE</b> </a>    <a href = "https://youtu.be/OyWshOHG_Aw"> <b>VIDEO</b> </a> <br><hr>
